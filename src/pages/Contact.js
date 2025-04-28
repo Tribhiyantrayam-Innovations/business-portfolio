@@ -5,13 +5,13 @@ function Contact() {
     <section>
       <div className="contact-main-wrapper">
   <div className="contact-form-wrapper">
-    <form action="https://contact.com/s/FORM_ID" method="POST">
+    <form action="https://sheetdb.io/api/v1/lvgi4oxmf5vv1" method="POST" novalidate>
         <div className="contact-input-flex">
           <div>
               <label for="firstname" className="contact-form-label"> First name </label>
               <input
               type="text"
-              name="firstname"
+              name="data[firstname]"
               id="firstname"
               placeholder="Jane"
               className="contact-form-input"
@@ -22,7 +22,7 @@ function Contact() {
               <label for="lastname" className="contact-form-label"> Last name </label>
               <input
               type="text"
-              name="lastname"
+              name="data[lastname]"
               id="lastname"
               placeholder="Cooper"
               className="contact-form-input"
@@ -36,7 +36,7 @@ function Contact() {
               <label for="email" className="contact-form-label"> Mail </label>
               <input
               type="email"
-              name="email"
+              name="data[email]"
               id="email"
               placeholder="jhon@mail.com"
               className="contact-form-input"
@@ -46,7 +46,7 @@ function Contact() {
           <div>
               <label for="phone" className="contact-form-label"> Phone </label>
               <div className="contact-phone-flex">
-                <select name="countryCode" id="countryCode" className="contact-country-code">
+                <select name="data[countryCode]" id="countryCode" className="contact-country-code">
                   <option value="+91">IN (+91)</option>
                   <option value="+93">Afghanistan (+93)</option>
                   <option value="+355">Albania (+355)</option>
@@ -273,7 +273,7 @@ function Contact() {
                 </select>
                 <input
                   type="text"
-                  name="phone"
+                  name="data[phone]"
                   id="phone"
                   placeholder="(319) 555-0115"
                   className="contact-form-input"
@@ -286,7 +286,7 @@ function Contact() {
         <div className="contact-mb-3">
             <label for="service" className="contact-form-label"> What are you looking for? </label>
             <select
-              name="service"
+              name="data[service]"
               id="service"
               className="contact-form-input"
             >
@@ -302,7 +302,7 @@ function Contact() {
             <label for="message" className="contact-form-label"> Message </label>
             <textarea
                 rows="6"
-                name="message"
+                name="data[message]"
                 id="message"
                 placeholder="Type your message"
                 className="contact-form-input"
@@ -310,7 +310,7 @@ function Contact() {
             ></textarea>
         </div>
 
-        <button className="contact-btn">
+        <button type='submit' className="contact-btn">
             Send Message
         </button>
     </form>
